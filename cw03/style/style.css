@@ -1,0 +1,102 @@
+*{
+    text-decoration: underline;
+}
+
+h1{
+    color:red;
+    text-decoration: none;
+}
+
+p{
+    color:green;
+}
+/* span{
+    color:yellow;
+} */
+a{
+    color: black;
+    
+}
+p a{
+    color: rgb(216, 37, 165);
+}
+p a span{
+    color:darkblue;
+}
+header a{
+    color: black;
+}
+
+h3{
+    color:blue;
+}
+
+span,
+h2,
+h3{
+    color:yellow;
+}
+/* dry */
+
+#tex-Id{
+    background-color: black;
+}
+#tex-id{
+    background-color: rgb(19, 113, 113);
+}
+
+
+.text-p.last{
+    font-size: 30px;
+}
+header .text-p{
+    font-size: 24px;
+    color:darkgreen;
+}
+footer .text-p{
+    color: darkblue;
+}
+
+a.active{
+    color:red;
+}
+div+div+div{
+    background-color: black;
+    color: white;
+}
+
+input[type=text]{
+    background-color: red;
+}
+div:empty{
+    background-color: yellow;
+    height: 100px;
+}
+div:hover{
+    background-color: red;
+}
+
+p:hover span{
+    background-color: darkblue;
+    color:yellow;
+}
+
+ul li{
+    background-color: darkcyan;
+}
+ul li:first-child{
+    background-color: darkgoldenrod;
+}
+ul li:last-child{
+    background-color: chartreuse;
+}
+ul li:nth-child(3){
+    background-color: darkblue;
+}
+ul li:nth-child(5){
+    background-color: darkorange;
+}
+ul li:nth-child(8){
+    background-color: rgb(198, 12, 93);
+}
+
