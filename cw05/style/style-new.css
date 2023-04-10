@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 960px;
+    margin: 0 auto;
+}
+section div p{
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    color: gray;
+}
