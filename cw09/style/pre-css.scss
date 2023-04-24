@@ -1,0 +1,126 @@
+body{
+    font-size: 16px;
+}
+.wrapper{
+    margin: 0 auto;
+}
+header{
+    background-color: blue;
+    .wrapper{
+        padding: 100px;
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li{
+                display: inline-block;
+            }
+        }
+    }
+}
+
+section{
+    background-color: pink;
+    padding: 100px 0;
+    ul{
+        margin: 0;
+
+    }
+    .list-item{
+        margin-right: 100px;
+        &:last-child{
+            margin-right: 0;
+        }
+        &:hover{
+            background-color: red;
+        }
+        &::before{
+            content: "Hello";
+            color: white;
+        }
+    }
+}
+// var
+$title-color:#0ca038;
+$special-clolor: #f9f7f7;
+$text-color:gray;
+$block-padding:100px;
+
+h1{
+    color: $title-color;
+}
+h2{
+    color: $title-color;
+}
+.special-title{
+    color: $special-clolor;
+
+}
+@media (max-widht:1000px) {
+    .special-title{
+        color: $special-clolor;
+    }
+}
+// header .wrapper{
+//     padding: 100px;
+// }
+
+@mixin reset-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+@mixin btn-body{
+    padding: 10px 20px;
+    border: 2px solid yellow;
+    font-size: 20px;
+}
+.menu{
+    @include reset-list;
+}
+nav{
+    @include reset-list;
+}
+.btn{
+    @include btn-body;
+    background-color: blue;
+}
+.my-btn{
+    @include btn-body;
+    background-color: black;
+    margin: 0 auto;
+}
+@mixin square($size, $radius: 0) {
+    width: $size;
+    height: $size;
+  
+    @if $radius != 0 {
+      border-radius: $radius;
+    }
+}
+.avatar{
+    @include square(100px, $radius: 50%);
+}
+
+.avatar-new{
+    @include square(300px, $radius: 0);
+}
+
+.btn-set{
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    &:hover{
+        background-color: black;
+    }
+    color: $special-clolor;
+}
+
+.red-btn{
+    @extend .btn-set;
+    background-color: red;
+}
+.orange-btn{
+    @extend .btn-set;
+    background-color: orange;
+}

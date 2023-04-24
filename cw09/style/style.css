@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+header{
+    padding: 100px;
+    background-color: blue;
+    /* position: fixed;
+    bottom: 20px;
+    right: 20px; */
+    position: sticky;
+    top: 0;
+}
+section{
+    height: 1500px;
+    padding: 100px;
+    background-color: yellow;
+    position: relative;
+}
+.abs{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    top: 100px;
+    left: 900px;
+    z-index: 2;
+}
+
+

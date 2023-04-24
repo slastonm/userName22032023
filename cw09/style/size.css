@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    font-size: 10px;
+}
+section{
+    /* font-size: 20px; */
+}
+.block{
+    /* font-size: 15px; */
+    width: 20em;
+    padding: 2em 4em;
+    background-color: yellow;
+}
+button{
+    font-size: 16px;
+    padding: 1rem 2rem;
+}
+@media(max-width:1600px){
+    html, body{
+        font-size: 20px;
+    }
+}
+
+/* button span{
+    font-size: inherit; 
+} */
