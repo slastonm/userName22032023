@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+}
+.i-grid{
+    display: inline-grid;
+}
+.d-grid{
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+    background-color: lightblue;
+    /* grid-template-columns: 100px 300px 200px 400px; */
+    /* grid-template-columns: 10vw 30vw 20vw 4vw; */
+    /* grid-template-columns: 400px auto; */
+    /* grid-template-columns: repeat(10, 10%); */
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    grid-template-columns: minmax(150px, 100px) 300px;
+    /* grid-template-rows: 100px 200px; */
+    grid-column-gap:10px;
+    grid-row-gap:50px;
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* align-content: start; */
+    /* align-content: end; */
+    /* align-content: space-around; */
+
+
+    height: 500px;
+
+
+}
+.d-grid>div{
+    border: 1px solid black;
+    background-color: white;
+}
+.d-grid div:nth-child(1){
+    /* grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4; */
+    justify-self: center;
+    align-self: center;
+}
+.d-grid div:nth-child(4){
+    /* grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3; */
+    justify-self: end;
+    align-self: start;
+}
+.container{
+    display: grid;
+    grid-template-columns: 100px 100px 200px;
+    grid-template-rows: 100px 400px 100px;
+    grid-template-areas:
+    "header header header"
+    "aside section section"
+    "footer footer footer";
+    /* justify-content: start; */
+    /* justify-content: end; */
+   
+
+
+}
+header{
+    background-color: yellow;
+    grid-area: header;
+}
+aside{
+    background-color: darkblue;
+    grid-area: aside;
+}
+section{
+    background-color: darkgoldenrod;
+    grid-area: section;
+}
+footer{
+    background-color: darkmagenta;
+    grid-area: footer;
+}
+@media(max-width:1000px){
+    .container{
+        /* grid-template-rows: auto auto auto; */
+        grid-template-rows: repeat(4, 100px);
+        grid-template-areas:
+        "header header header"
+        "section section section"
+        ". aside aside"
+        "footer footer footer";
+    }
+}
